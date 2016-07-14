@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
      */
     public void increment(View view) {
         if (quantity == 100) {
-            Toast.makeText(this, "No puede pedir mas de 100 cafes", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, R.string.no_more, Toast.LENGTH_SHORT).show();
             return;
         }
         quantity = quantity + 1;
@@ -43,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
      */
     public void decrement(View view) {
         if (quantity == 1) {
-            Toast.makeText(this, "No puede pedir menos de 1 cafe", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, R.string.no_less, Toast.LENGTH_SHORT).show();
             return;
         }
         quantity = quantity - 1;
@@ -77,7 +77,7 @@ public class MainActivity extends AppCompatActivity {
         Intent email = new Intent(Intent.ACTION_SENDTO);
         email.setData(Uri.parse("mailto:")); // only email apps should handle this
         email.putExtra(Intent.EXTRA_TEXT, priceMessage);
-        email.putExtra(Intent.EXTRA_SUBJECT, "Pedido de café para " + nombre);
+        email.putExtra(Intent.EXTRA_SUBJECT, getString(R.string.order_for) + nombre);
         if (email.resolveActivity(getPackageManager()) != null) {
             startActivity(email);
         }
@@ -111,12 +111,12 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private String createOrderSummary(int price, boolean whipped, boolean chocolate, String nombre) {
-        String priceMessage = "Nombre: " + nombre;
-        priceMessage += "\nAdd whipped cream? " + whipped;
-        priceMessage += "\nAdd chocolate? " + chocolate;
-        priceMessage += "\nQuantity: " + quantity;
+        String priceMessage = getString(R.string.Name) +": " + nombre;
+        priceMessage += "\n" + getString(R.string.add_whipped_cream) + whipped;
+        priceMessage += "\n" + getString(R.string.add_chocolate) + chocolate;
+        priceMessage += "\n"+ getString(R.string.Quantity) +": " + quantity;
         priceMessage += "\nTotal: $" + price;
-        priceMessage += "\nGracias!";
+        priceMessage += "\n" + getString(R.string.thankyou);
         return priceMessage;
     }
 }

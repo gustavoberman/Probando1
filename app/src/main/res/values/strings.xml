@@ -6,4 +6,10 @@
     <string name="Chocolate">Chocolate</string>
     <string name="Quantity">Quantity</string>
     <string name="Order">Order</string>
+    <string name="add_whipped_cream">"Add whipped cream? "</string>
+    <string name="add_chocolate">"Add chocolate? "</string>
+    <string name="thankyou">Thank you!</string>
+    <string name="no_more">You cannot have more than 100 coffees</string>
+    <string name="no_less">You cannot have less than 1 coffee</string>
+    <string name="order_for">"Just Java order for "</string>
 </resources>
