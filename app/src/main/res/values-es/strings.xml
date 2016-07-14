@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Probando1</string>
+    <string name="Whippedcream">Crema batida</string>
+    <string name="Toppings">Ingredientes extra</string>
+    <string name="Quantity">Cantidad</string>
+    <string name="Order">Solicitar</string>
+    <string name="Name">Nombre</string>
+    <string name="Chocolate">Chocolate</string>
+</resources>
